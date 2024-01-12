@@ -1,0 +1,22 @@
+.button {
+  min-width: 6.25rem;
+  height: 2.5rem;
+  border-radius: 100px;
+  border: none;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.primary-button {
+  @extend .button;
+
+  color: #ffffff;
+  background-color: #0bb1d9;
+  font-weight: 700;
+
+  &:hover,
+  &:active {
+    opacity: 0.8;
+  }
+}

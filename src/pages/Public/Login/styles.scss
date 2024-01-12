@@ -1,0 +1,44 @@
+.login {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 1rem;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 13, 36, 1) 1%,
+    rgba(173, 173, 185, 1) 67%
+  );
+
+  &__title {
+    color: #ffffff;
+    font-size: 2rem;
+  }
+
+  &__card {
+    height: 275px;
+    min-height: 200px;
+    min-width: 250px;
+    width: 400px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    padding: 1rem 0rem 2rem;
+
+    & > :not(h2) {
+      width: 60%;
+    }
+
+    & > :last-child {
+      margin-top: 1rem;
+    }
+  }
+}
