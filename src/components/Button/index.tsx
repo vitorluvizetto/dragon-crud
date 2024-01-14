@@ -4,21 +4,26 @@ import "./styles.scss";
 
 interface IButton {
   className?: string;
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
   children: string | React.ReactElement;
+  type: "submit" | "reset" | "button" | undefined;
+  disabled?: boolean;
 }
 
 const Button: React.FunctionComponent<IButton> = ({
   children,
   className,
   onClick,
+  type,
+  disabled,
   ...props
 }) => {
   return (
     <button
-      type="button"
+      type={type}
       onClick={onClick}
-      className={`primary-button ${className}`}
+      className={`primary-button${disabled ? "--disabled" : ""} ${className}`}
+      disabled={disabled}
       {...props}
     >
       {children}

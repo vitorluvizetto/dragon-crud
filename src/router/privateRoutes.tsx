@@ -2,7 +2,7 @@ import Home from "../pages/Private/Home";
 
 const adminRoutes: Route[] = [
   {
-    path: "",
+    path: "home",
     element: <Home />,
   },
 ];

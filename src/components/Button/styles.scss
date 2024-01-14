@@ -19,4 +19,12 @@
   &:active {
     opacity: 0.8;
   }
+
+  &--disabled {
+    @extend .button;
+    background: rgba(31, 31, 31, 0.38);
+    color: #1c1b1f;
+    pointer-events: none;
+    font-weight: 700;
+  }
 }

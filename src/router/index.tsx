@@ -1,5 +1,7 @@
 import { Outlet, createBrowserRouter } from "react-router-dom";
 
+import Auth from "../components/Auth";
+
 import publicRoutes from "./publicRoutes";
 import privateRoutes from "./privateRoutes";
 
@@ -10,8 +12,12 @@ const router = createBrowserRouter([
     children: publicRoutes,
   },
   {
-    path: "/home",
-    element: <Outlet />,
+    path: "*",
+    element: (
+      <Auth>
+        <Outlet />
+      </Auth>
+    ),
     children: privateRoutes,
   },
 ]);

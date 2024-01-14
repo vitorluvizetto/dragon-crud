@@ -9,14 +9,9 @@
 
   background: linear-gradient(
     180deg,
-    rgba(0, 13, 36, 1) 1%,
+    rgba(235, 64, 52, 1) 1%,
     rgba(173, 173, 185, 1) 67%
   );
-
-  &__title {
-    color: #ffffff;
-    font-size: 2rem;
-  }
 
   &__card {
     height: 275px;
@@ -33,12 +28,16 @@
 
     padding: 1rem 0rem 2rem;
 
-    & > :not(h2) {
+    &__form {
       width: 60%;
-    }
 
-    & > :last-child {
-      margin-top: 1rem;
+      & > * {
+        width: 100%;
+      }
+
+      & > :last-child {
+        margin-top: 1rem;
+      }
     }
   }
 }
