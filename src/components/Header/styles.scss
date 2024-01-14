@@ -7,18 +7,31 @@
   background-color: #b6b6b6;
 
   ul {
+    padding: 0;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
     list-style: none;
     li {
       button {
+        font-size: 1rem;
         border: none;
         background-color: transparent;
-        cursor: pointer;
         font-weight: 600;
+        cursor: pointer;
 
         &:hover {
           opacity: 0.5;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .header {
+    ul {
+      width: 100%;
     }
   }
 }

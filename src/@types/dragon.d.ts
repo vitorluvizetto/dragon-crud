@@ -5,3 +5,9 @@ type Dragon = {
   histories: string;
   createdAt: string;
 };
+
+type CreateDragon = {
+  name: string;
+  type: string;
+  histories: string;
+};
