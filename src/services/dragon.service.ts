@@ -8,7 +8,7 @@ export const list = (): Promise<[]> =>
       throw error;
     });
 
-export const get = (id: string): Promise<unknown> =>
+export const find = (id: string): Promise<unknown> =>
   api
     .get(`/dragon/${id}`)
     .then((res) => res.data)
