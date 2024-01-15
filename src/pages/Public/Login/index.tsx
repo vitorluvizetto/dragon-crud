@@ -14,9 +14,11 @@ const Login = (): React.ReactNode => {
 
   const [user, setUser] = useState({ email: "", password: "" });
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string>("");
 
   const handleSubmit = useCallback(
     async (event: React.SyntheticEvent) => {
+      setError("");
       event.preventDefault();
 
       try {
@@ -25,7 +27,10 @@ const Login = (): React.ReactNode => {
 
         navigate("/home");
       } catch (error) {
-        console.error(error);
+        console.error((error as Error).message);
+        if ((error as Error).message.includes("auth/invalid-credential")) {
+          setError("Credenciais inválidas");
+        }
       } finally {
         setLoading(false);
       }
@@ -69,6 +74,8 @@ const Login = (): React.ReactNode => {
             Login
           </Button>
         </form>
+
+        {!!error.length && <h4 className="login__error">{error}</h4>}
       </section>
     </main>
   );

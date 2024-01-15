@@ -1,7 +1,8 @@
 # Dragon CRUD
 
-Necessário ter instalado Node e Yarn
-Versão do node utilizada para desenvolvimento: v18.19.0
+Necessário ter instalado Node e Yarn.
+
+Versão do node utilizada para desenvolvimento: v18.19.0.
 
 Após ter instalado
 
