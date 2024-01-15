@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom";
 
 import { Input } from "../../../../components/Input";
 import Button from "../../../../components/Button";
-
-import "./styles.scss";
 import { create } from "../../../../services/dragon.service";
 import { TextArea } from "../../../../components/TextArea";
+
+import "./styles.scss";
 
 const Create = (): React.ReactNode => {
   const navigate = useNavigate();

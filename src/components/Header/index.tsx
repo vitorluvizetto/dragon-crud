@@ -18,7 +18,8 @@ const Header: React.FunctionComponent = () => {
     <nav className="header">
       <ul>
         <li>
-          {!location.pathname.includes("create") ? (
+          {!location.pathname.includes("create") &&
+          !location.pathname.includes("details") ? (
             <button onClick={goToCreateDragon}>Criar dragão</button>
           ) : (
             <button onClick={goBack}>Voltar</button>

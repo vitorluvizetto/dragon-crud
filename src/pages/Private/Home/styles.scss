@@ -17,7 +17,6 @@
 
       margin-top: 1rem;
       margin-right: 1rem;
-      padding: 2rem;
 
       box-shadow: rgba(149, 157, 165, 0.8) 0px 4px 12px;
       background-color: #e6e6e6;
@@ -25,18 +24,30 @@
       border-radius: 10px;
       position: relative;
       transition: opacity 0.1s ease-in-out;
-      cursor: pointer;
 
       align-items: center;
       justify-content: space-between;
-      z-index: 1;
+
+      &__name {
+        display: flex;
+        align-items: center;
+        padding: 2rem;
+        width: 100%;
+        cursor: pointer;
+        h3 {
+          width: 100%;
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
 
       &__icons {
         display: flex;
         gap: 1rem;
         position: absolute;
         right: 20px;
-        z-index: 999;
+        z-index: 40;
 
         button {
           border: none;
@@ -46,12 +57,6 @@
           &:hover {
             opacity: 0.6;
           }
-        }
-      }
-
-      h3 {
-        &:hover {
-          opacity: 0.5;
         }
       }
     }

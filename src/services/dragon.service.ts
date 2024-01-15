@@ -8,7 +8,7 @@ export const list = (): Promise<Dragon[]> =>
       throw error;
     });
 
-export const find = (id: string): Promise<Dragon> =>
+export const find = (id: string | undefined): Promise<Dragon> =>
   api
     .get(`/dragon/${id}`)
     .then((res) => res.data)
