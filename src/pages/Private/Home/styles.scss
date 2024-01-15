@@ -1,0 +1,83 @@
+.dragon-list {
+  & > * {
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__card {
+      display: flex;
+      box-sizing: border-box;
+      flex-basis: 50%;
+      max-width: 48%;
+
+      margin-top: 1rem;
+      margin-right: 1rem;
+
+      box-shadow: rgba(149, 157, 165, 0.8) 0px 4px 12px;
+      background-color: #e6e6e6;
+      border: 1px solid #000000;
+      border-radius: 10px;
+      position: relative;
+      transition: opacity 0.1s ease-in-out;
+
+      align-items: center;
+      justify-content: space-between;
+
+      &__name {
+        display: flex;
+        align-items: center;
+        padding: 2rem;
+        width: 100%;
+        cursor: pointer;
+        h3 {
+          width: 100%;
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+
+      &__icons {
+        display: flex;
+        gap: 1rem;
+        position: absolute;
+        right: 20px;
+        z-index: 40;
+
+        button {
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  .dragon-list {
+    & > * {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 890px) {
+  .dragon-list {
+    &__container {
+      &__card {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}

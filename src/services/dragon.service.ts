@@ -1,6 +1,6 @@
 import api from "./api";
 
-export const list = (): Promise<[]> =>
+export const list = (): Promise<Dragon[]> =>
   api
     .get("/dragon")
     .then((res) => res.data)
@@ -8,7 +8,7 @@ export const list = (): Promise<[]> =>
       throw error;
     });
 
-export const get = (id: string): Promise<unknown> =>
+export const find = (id: string | undefined): Promise<Dragon> =>
   api
     .get(`/dragon/${id}`)
     .then((res) => res.data)
@@ -16,7 +16,7 @@ export const get = (id: string): Promise<unknown> =>
       throw error;
     });
 
-export const create = ({ data }: { data: unknown }): Promise<void> =>
+export const create = ({ data }: { data: CreateDragon }): Promise<Dragon> =>
   api
     .post("/dragon", data)
     .then((res) => res.data)
@@ -28,7 +28,7 @@ export const update = ({
   data,
   id,
 }: {
-  data: unknown;
+  data: CreateDragon;
   id: string;
 }): Promise<void> =>
   api
@@ -38,7 +38,7 @@ export const update = ({
       throw error;
     });
 
-export const deleteDragon = (id: string): Promise<unknown> =>
+export const deleteDragon = (id: string): Promise<void> =>
   api
     .delete(`/dragon/${id}`)
     .then((res) => res.data)
