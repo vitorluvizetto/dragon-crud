@@ -5,11 +5,16 @@ import Header from "../components/Header";
 
 import publicRoutes from "./publicRoutes";
 import privateRoutes from "./privateRoutes";
+import PublicRedirect from "./redirectLogin";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Outlet />,
+    element: (
+      <PublicRedirect>
+        <Outlet />
+      </PublicRedirect>
+    ),
     children: publicRoutes,
   },
   {
